@@ -1,14 +1,31 @@
-*{
-box-sizing: border-box;
-margin:0;
-padding:0;
-} 
-.cabecalho {
-padding: 15px 25px;
-display: flex;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
+body { 
+  display: flex; 
+  flex-direction: column; 
+  min-height: 100vh; /* Corrigido de 'in-height' para 'min-height' */
+} 
+
+.cabecalho {  
+  display: flex;  
+  justify-content: space-between;  
+  align-items: center;  
+  padding: 15px 25px; /* Código repetido unificado aqui */
+}  
+
+main {  
+  flex: 1;  
+} 
+
 .cartao {
-width: 260px;
-height: 200px;
+  width: 260px;
+  height: 200px;
+}
+
+.cartao-imagem {
+  width: 100%;
 }
