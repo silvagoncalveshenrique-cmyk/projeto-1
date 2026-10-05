@@ -1,45 +1,361 @@
-<!DOCTYPE html> 
-<html lang="pt-br"> 
-  <head> 
-    <meta charset="UTF-8" /> 
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilo.css" /> 
-    <title>Flashcards de Mitos e Verdades</title> 
-  </head> 
-  <body> 
-    <header> 
-    </header> 
- 
-    <main> 
-    </main> 
- 
-    <footer> 
-    </footer> 
-  </body> 
- <header class="cabecalho"> 
-  <h1>Confere Aí</h1> 
-  <nav> 
-    <a href="#">Início</a> 
-  </nav> 
-</header> <main> 
-  <h2>Descubra a verdade passando o mouse</h2> 
-    <section> 
-    <article class="cartao"> 
-      <div class="cartao-interno"> 
-        <div class="cartao-frente"> 
-          <img src="https://static.nationalgeographicbrasil.com/files/styles/image_3200/public/mm1012723121410486.jpg?w=1900&h=2849" alt="Pinguim" class="cartao-imagem"> 
-          <p>Pinguins conseguem voar como pássaros!</p> 
-        </div> 
-        <div class="cartao-verso"> 
-          <img src="https://static.nationalgeographicbrasil.com/files/styles/image_3200/public/mm1012723121410486.jpg?w=1900&h=2849" alt="Pinguim" class="cartao-imagem"> 
-          <p>Pinguins não voam, mas são excelentes nadadores.</p> 
-        </div> 
-      </div> 
-    </article> 
-  </section> 
-</main> <footer> 
-  <p>Projeto feito por Henrique</p> 
-</footer> 
 
-<a href="#" class="cabecalho-link">Início</a>
+    <title>Mundo dos Pinguins</title>
 
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #e8f7ff;
+            color: #183642;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #071d2b, #176b87);
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2em;
+        }
+
+        nav {
+            background: #092c3c;
+            text-align: center;
+            padding: 15px;
+            position: sticky;
+            top: 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #7de3ff;
+        }
+
+        main {
+            max-width: 1100px;
+            margin: auto;
+            padding: 30px 20px;
+        }
+
+        section {
+            background: white;
+            margin-bottom: 30px;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #12617a;
+            margin-bottom: 15px;
+            font-size: 2em;
+        }
+
+        .pinguim {
+            text-align: center;
+            font-size: 100px;
+            margin: 20px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .card {
+            background: #eaf9ff;
+            padding: 20px;
+            border-radius: 12px;
+            border-left: 5px solid #1594b8;
+        }
+
+        .card h3 {
+            color: #0d637d;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            padding-left: 25px;
+        }
+
+        li {
+            margin: 8px 0;
+        }
+
+        .curiosidade {
+            background: #d4f3ff;
+            border-left: 6px solid #1594b8;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .destaque {
+            background: linear-gradient(135deg, #1594b8, #0b4f68);
+            color: white;
+        }
+
+        .destaque h2 {
+            color: white;
+        }
+
+        footer {
+            background: #071d2b;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            nav a {
+                display: block;
+                margin: 8px;
+            }
+
+            section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="pinguim">🐧</div>
+        <h1>Mundo dos Pinguins</h1>
+        <p>Conheça esses incríveis animais das regiões frias do planeta!</p>
+    </header>
+
+    <nav>
+        <a href="#sobre">Sobre</a>
+        <a href="#habitat">Habitat</a>
+        <a href="#alimentacao">Alimentação</a>
+        <a href="#especies">Espécies</a>
+        <a href="#curiosidades">Curiosidades</a>
+    </nav>
+
+    <main>
+
+        <section id="sobre">
+            <h2>🐧 O que são os pinguins?</h2>
+
+            <p>
+                Os pinguins são aves que não conseguem voar, mas são excelentes
+                nadadores. Eles possuem o corpo adaptado para viver e se movimentar
+                na água.
+            </p>
+
+            <p>
+                Suas asas foram modificadas ao longo da evolução e funcionam como
+                nadadeiras. O corpo possui um formato aerodinâmico que ajuda os
+                pinguins a nadarem rapidamente.
+            </p>
+
+            <div class="curiosidade">
+                <strong>Você sabia?</strong>
+                Apesar de serem aves, os pinguins passam grande parte de suas vidas
+                na água!
+            </div>
+        </section>
+
+
+        <section id="habitat">
+            <h2>🌎 Onde vivem os pinguins?</h2>
+
+            <p>
+                Os pinguins vivem principalmente no Hemisfério Sul. A Antártida é
+                um dos locais mais conhecidos por abrigar esses animais, mas nem
+                todas as espécies vivem em regiões extremamente geladas.
+            </p>
+
+            <div class="cards">
+
+                <div class="card">
+                    <h3>❄️ Antártida</h3>
+                    <p>
+                        É o lar de espécies como o pinguim-imperador e o
+                        pinguim-de-adélia.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>🏝️ Ilhas</h3>
+                    <p>
+                        Algumas espécies vivem em ilhas próximas à América do Sul,
+                        África e Oceania.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>☀️ Regiões mais quentes</h3>
+                    <p>
+                        O pinguim-das-galápagos vive próximo à linha do Equador,
+                        mostrando que nem todos os pinguins vivem no gelo.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+
+        <section id="alimentacao">
+            <h2>🐟 O que os pinguins comem?</h2>
+
+            <p>
+                Pinguins são animais carnívoros. Sua alimentação é composta
+                principalmente por animais marinhos.
+            </p>
+
+            <ul>
+                <li>🐟 Peixes</li>
+                <li>🦐 Krill</li>
+                <li>🦑 Lulas</li>
+                <li>🦐 Pequenos crustáceos</li>
+            </ul>
+
+            <p>
+                Para conseguir alimento, os pinguins mergulham no oceano e usam
+                sua excelente capacidade de natação para perseguir suas presas.
+            </p>
+        </section>
+
+
+        <section id="especies">
+            <h2>🐧 Algumas espécies de pinguins</h2>
+
+            <div class="cards">
+
+                <div class="card">
+                    <h3>Pinguim-imperador</h3>
+                    <p>
+                        É a maior espécie de pinguim existente. Vive na Antártida
+                        e consegue suportar temperaturas extremamente baixas.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>Pinguim-rei</h3>
+                    <p>
+                        É uma das maiores espécies de pinguins e possui uma
+                        característica coloração alaranjada na região do pescoço.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>Pinguim-das-galápagos</h3>
+                    <p>
+                        É uma das poucas espécies de pinguins que vivem em uma
+                        região próxima à linha do Equador.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>Pinguim-azul</h3>
+                    <p>
+                        É uma das menores espécies de pinguins e possui penas
+                        com uma tonalidade azulada.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+
+        <section id="curiosidades" class="destaque">
+            <h2>🤯 Curiosidades sobre os pinguins</h2>
+
+            <ul>
+                <li>
+                    Pinguins não voam, mas podem nadar muito bem.
+                </li>
+
+                <li>
+                    Eles possuem uma camada de gordura que ajuda a conservar
+                    o calor corporal.
+                </li>
+
+                <li>
+                    As penas dos pinguins ajudam na proteção contra a água fria.
+                </li>
+
+                <li>
+                    Algumas espécies formam grandes colônias para viver e
+                    reproduzir.
+                </li>
+
+                <li>
+                    O pinguim-imperador é capaz de suportar condições
+                    extremamente frias na Antártida.
+                </li>
+
+                <li>
+                    Nem todos os pinguins vivem em lugares cobertos de gelo.
+                </li>
+            </ul>
+        </section>
+
+
+        <section>
+            <h2>🌱 Como podemos ajudar os pinguins?</h2>
+
+            <p>
+                Os pinguins enfrentam problemas relacionados às mudanças
+                ambientais, à disponibilidade de alimento e à poluição dos
+                oceanos.
+            </p>
+
+            <p>
+                Algumas atitudes que ajudam a proteger esses animais são:
+            </p>
+
+            <ul>
+                <li>♻️ Reduzir o uso de plástico.</li>
+                <li>🌊 Evitar a poluição dos oceanos.</li>
+                <li>🐟 Proteger os ecossistemas marinhos.</li>
+                <li>🌎 Cuidar do meio ambiente.</li>
+                <li>📚 Aprender mais sobre a conservação dos animais.</li>
+            </ul>
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>🐧 Mundo dos Pinguins</p>
+        <p>Site educativo sobre pinguins</p>
+    </footer>
+
+</body>
+</html>
